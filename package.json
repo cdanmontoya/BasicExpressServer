@@ -1,0 +1,26 @@
+{
+  "name": "basicexpressserver",
+  "version": "1.0.0",
+  "description": "Basic express server with a simple MongoDB connection for general purposes",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdanmontoya/BasicExpressServer.git"
+  },
+  "author": "cdanmontoya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cdanmontoya/BasicExpressServer/issues"
+  },
+  "homepage": "https://github.com/cdanmontoya/BasicExpressServer#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.0",
+    "morgan": "^1.9.1"
+  }
+}
