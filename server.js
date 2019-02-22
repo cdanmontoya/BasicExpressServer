@@ -4,6 +4,7 @@
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 /**
  * Routes to the different resources
@@ -36,6 +37,7 @@ const server = (app) => {
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(morgan(morganMode));
+    app.use(cors());
     // app.use('/', routes);
 }
 

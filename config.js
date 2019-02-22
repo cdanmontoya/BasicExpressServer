@@ -9,15 +9,23 @@ const morganMode = process.env.Dev ? 'dev' : 'tiny';
  */
 const mongoUser = '';
 const mongoPassword = '';
-const mongoURI = '';
+const mongoHost = '';
+const mongoPort = '27017';
+const mongoDatabase = '';
+const mongoOpt = {
+    user: '',                             // DB Username
+    pass: '',                             // DB 
+    dbName: ''
+  };
 
 /**
  * MongoDB URL. Can be a local or a remote one.
  */
-const mongoDB = `mongodb://${mongoUser}:${mongoPassword}@${mongoURI}`;
+const mongoDB = `mongodb://${mongoUser}:${mongoPassword}@${mongoHost}:${mongoPort}/${mongoDatabase}`;
 
 module.exports = {
     port,
     morganMode,
-    mongoDB
+    mongoDB,
+    mongoOpt
 };
