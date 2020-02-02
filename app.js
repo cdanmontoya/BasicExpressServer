@@ -1,9 +1,9 @@
-const express = require('express');
-const server = require('./server');
+const Express = require('express');
+const server = require('./config/server');
 
-let app = new express();
+const app = new Express();
 server(app);
 
 app.listen(app.get('port'), () => {
-    console.log(`The app is listening on the port ${app.get('port')}`);
+  console.log(`The app is listening on the port ${app.get('port')}`);
 });
