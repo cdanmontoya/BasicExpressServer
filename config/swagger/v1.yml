@@ -1,0 +1,36 @@
+openapi: 3.0.0
+info:
+  title: "Basic Express Server"
+  description: "This basic server was made with the purpose of making easier a quick deployment of a Node-based application."
+  version: "1.0.2"
+
+servers:
+  - url: https://cdanmontoya-bes.herokuapp.com/api/v1
+  - url: http://localhost:5000/api/v1
+
+paths:
+  /hello-world:
+    get:
+      tags:
+        - Hello
+      summary: Returns a 'Hello World' as a message.
+
+      responses:
+        '200':
+          description: Hello world response.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Message'
+        '500':
+          description: Internal server error.
+  
+components:
+  schemas:    
+    Message:
+      properties:
+        message:
+          type: string
+          description: Message from the server.
+      required:
+        - "text"
