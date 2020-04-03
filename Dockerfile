@@ -20,4 +20,4 @@ COPY . /usr/src/app
 EXPOSE 8080
 
 # Serve the app
-CMD ["npm", "start"]
+CMD ["npm", "start", "--host", "0.0.0.0"]
