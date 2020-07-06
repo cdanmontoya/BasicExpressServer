@@ -2,7 +2,7 @@ const {
   DB_PASS,
   DB_USER,
   DB_HOST,
-} = process.env;
+} = require('../environment');
 
 const MONGODB_OPTIONS = { useNewUrlParser: true, useUnifiedTopology: true };
 
