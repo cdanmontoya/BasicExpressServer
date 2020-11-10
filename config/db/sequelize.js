@@ -6,11 +6,11 @@ const {
   DB_USER,
   DB_PASS,
   DB_DIALECT,
-} = process.env;
+} = require('../environment');
 
 const sequelize = new Sequelize(DB_NAME, DB_USER, DB_PASS, {
-  DB_HOST,
-  DB_DIALECT,
+  host: DB_HOST,
+  dialect: DB_DIALECT,
 });
 
 const db = {};

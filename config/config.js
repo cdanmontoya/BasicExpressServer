@@ -1,8 +1,10 @@
 /**
  * Server configuration
  */
-const port = process.env.DEV ? 5000 : process.env.PORT;
-const morganMode = process.env.DEV ? 'dev' : 'tiny';
+const { DEV, PORT } = require('./environment');
+
+const port = DEV ? 5000 : PORT;
+const morganMode = DEV ? 'dev' : 'tiny';
 
 module.exports = {
   port,
